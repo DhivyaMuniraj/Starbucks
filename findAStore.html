@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" a href="findAStore.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+     var shop=[{
+     Name:"Chennai",
+     Address:"Bergamo Mall,Ground Floor, Bergamo Mall, Khadar Nawas Khan Road, Chennai 600006"
+},
+    {
+    Name:"Chennai",
+     Address:"BSR Building,Ground Floor, OMR, Thoraipakkam, Chennai 600097"
+    },
+    {
+     Name:"Bangalore",
+     Address:"Terminal Building-1, Level-1, International SHA- Departure, Bangalore 560300",
+    },
+    {
+        Name:"Gurgeon",
+        Address:"Shoppers Stop, Golf Course Rd,Shoppers Stop, Golf Course Rd. Ground floor, Tapasya One, Sector 53, Gurgaon, 122002",
+    },
+    {
+        Name:"Kolkata",
+        Address:"Acropolis Mall,Ground floor, Acropolis Mall, Rajdanga Main Road, Shantipally, Sector I, East Kolkata, Kolkata 700107",
+    },
+    {
+        Name:"Noida",
+        Address:"Advant Navis Business Park,E001, Ground Floor, Uptown Square, Advant Navis Business Park, Plot 7, Sector 142, Noida-Greater Noida Expy, Noida, 201305",
+    },
+    {
+        Name:"New Delhi",
+        Address:"Aerocity,Ground Floor, Worldmark 1, Aerocity , New Delhi 110037",
+    },
+    {
+        Name:"Hyderabad",
+        Address:"Alcazar Building,Ground floor, Alcazar building, Road number 36, Jubilee Hills, Venkatgiri, Hyderabad 500033",
+    },
+    {
+        Name:"Mumbai",
+        Address:"Borivali West,The Corner, New Link Road, Eksar Road, Borivali West, Mumbai 400091",
+    },
+    {
+        Name:"Vadodra",
+        Address:"Center Square Mall,Unit No 138 ground floor Genda Circle Sarabhai Road Vadodra 390023",
+    },
+    {
+        Name:" Chandigarh",
+        Address:"Chandigarh Sector-7 C,SCO 44, Madhya Marg, Sector 7, Chandigarh, 160019",
+    },
+    {
+        Name:"Pune",
+        Address:"Eon Phase 2,Podium Floor, Eon Phase 2, Kharad, Pune 411014",
+    },
+];
+    var body_container=document.getElementById("container");
+   
+   
+     //creating navigation inner_div2 topics
+    var nav_Div=document.createElement("div");
+    nav_Div.className="nav_innerDiv_2";
+    nav_Div.setAttribute("id","nav_innerDiv_2");
+    body_container.appendChild( nav_Div);
+    //creating a underorder list for topics
+    var topics_unorder= document.createElement("ul");
+    topics_unorder.className="topics_unorder"
+    nav_Div.appendChild(topics_unorder);
+    //creating anchor for topics
+    var topics_anchor=document.createElement("a");
+    topics_anchor.className="topics_anchor"
+    topics_anchor.href="#";
+    topics_unorder.appendChild(topics_anchor);
+    //creating topics list under unorder-list
+    //l1
+    var l1=document.createElement("li");
+    l1.className="topic_unorder_li";
+     l1.innerText="TRENDING";
+     topics_anchor.appendChild(l1);
+    //l2
+    var l2=document.createElement("li");
+    l2.className="topic_unorder_li";
+     l2.innerText="REWARDS";
+     topics_anchor.appendChild(l2);
+    //l3
+    var l3=document.createElement("li");
+    l3.className="topic_unorder_li";
+     l3.innerText="GIFTCARD";
+     topics_anchor.appendChild(l3);
+     //l4
+     var l4=document.createElement("li");
+     l4.className="topic_unorder_li";
+     l4.innerText="RESERVE";
+     topics_anchor.appendChild(l4);
+     //l5
+     var l5=document.createElement("li");
+     l5.className="topic_unorder_li";
+     l5.innerText="DELIVERY";
+     topics_anchor.appendChild(l5);
+     //creating main_container for body content
+     var main_container=document.createElement("div");
+    main_container.className="main_container";
+    body_container.appendChild(main_container);
+    //creating three div
+    
+    //creating first image div
+//     var images_div1=document.createElement("div");
+//     // images_div1.textContent="hi";
+//     images_div1.className="images_div_1";
+//      main_container.appendChild(images_div1);
+//     var div1=document.createElement("div");
+//     images_div1.appendChild(div1);
+//    //img1
+//     var div1_img1=document.createElement("img");
+//     div1_img1.className="images";
+//     div1_img1.src="https://th.bing.com/th/id/OIP.z-5RXUpMxI1zlC3l1v7iCQHaE8?pid=ImgDet&w=200&h=133&c=7&dpr=1.5";
+//     div1.appendChild(div1_img1)
+    
+//     //imge2
+//     var div2=document.createElement("div");
+//     var div1_img2=document.createElement("img");
+//     div1_img2.className="images";
+//     div1_img2.src="https://th.bing.com/th/id/OIP.31qKbeRILueHwT6zLib01wHaEK?w=288&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img2)
+//    //img3
+//     var div3=document.createElement("div");
+//     var div1_img3=document.createElement("img");
+//     div1_img3.className="images_3";
+//     div1_img3.src="https://th.bing.com/th/id/OIP.-Bq2OTWOSktYus7yX74QAwAAAA?w=208&h=169&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img3)
+//   //img4
+//     var div4=document.createElement("div");
+//     var div1_img4=document.createElement("img");
+//     div1_img4.className="images";
+//     div1_img4.src="https://th.bing.com/th/id/OIP.myN_3R8yMD6qDFCuex1QEAHaEK?w=265&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img4);
+
+//    //img5
+//     var div5=document.createElement("div");
+//     var div1_img5=document.createElement("img");
+//     div1_img5.className="images";
+//     div1_img5.src="https://media.istockphoto.com/photos/starbucks-shop-window-picture-id494441422";
+//     div1.appendChild(div1_img5)
+    
+    //creating second div ie search div
+    var search_div=document.createElement("div");
+    // search_div.textContent="hi";
+    search_div.className="search_div";
+    main_container.appendChild( search_div);
+    //  //DIV FOR SEARCH AND MAP
+    //  var search_map_div=document.createElement("div");
+    //  search_div.appendChild(search_map_div);
+     //creating input_search_div
+     var input_search_div=document.createElement("div");
+     input_search_div.className="input_search_div";
+      search_div.appendChild(input_search_div);
+    //  creating input tag for search
+       var input=document.createElement("input");
+        input.className="input_box";
+        input.type = "text";
+       input.name = "address";
+        input.id = "locate";
+        // input.addEventListener("click",shops);
+        input_search_div.appendChild(input);
+       //  creating search_button
+     var search_button=document.createElement("button");
+     search_button.className="search_button"
+     search_button.innerText="Search";
+     search_button.addEventListener("click",locate)
+     input_search_div.appendChild(search_button);
+    //  creating address div
+    var address_div=document.createElement("div");
+    address_div.setAttribute("id","address_div")
+    input_search_div.appendChild(address_div);
+    var shop_length=shop.length;
+//    function shops(){
+    for(var i=0;i<shop_length;i++){
+        //shop_name_displaying_div
+       var shop_name_div=document.createElement("div");
+       shop_name_div.setAttribute("id","shop-id")
+       shop_name_div.className="shop_name_div";
+       address_div.appendChild(shop_name_div);
+   // shop_name
+       var shop_name=document.createElement("h3");
+       shop_name.className="shop_name";
+    //    shop_name.setAttribute("id","shopname-id")
+       shop_name.innerText=shop[i].Name;
+       shop_name_div.appendChild(shop_name);
+       //shop_address
+       var shop_address=document.createElement("p");
+      shop_address.className="address_name";
+       shop_address.innerText=shop[i].Address;
+       shop_name_div.appendChild(shop_address);
+//       //icon
+//     // var icon=document.createElement("i");
+//     // shop_name_div.appendChild(icon);
+//     // let shop_icon=document.createElementNS("http://www.w3.org/2000/svg","svg");
+//     // let shop_path=document.createElementNS("http://www.w3.org/2000/svg");
+//     // shop_icon.setAttribute("fill","currentColor");
+//     // shop_icon.setAttribute("viewBox","0 0 16 16");
+//     // shop_icon.setAttribute("width","25");
+//     // shop_icon.setAttribute("class","bi bi-info-circle");
+//     // shop_icon.setAttribute("height","25");
+//     // shop_path.setAttribute("d","m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z");
+//     // shop_icon.setAttribute("color","#5b5959");
+//     // shop_icon.appendChild(shop_path);
+//     //  shop_length=shop_length+1;
+//     }
+}
+    var arr1=document.querySelectorAll("#shop-id");
+    // var arr1=document.querySelectorAll("#shopname-id");
+    // console.log(arr1);
+    // var arr1=document.querySelectorAll("#shopname-id");
+    function locate(){
+        var d = document.getElementById("locate").value;
+        for(var i=0;i<shop.length;i++){
+            if(d!=shop[i].Name){
+                arr1[i].style.display="none";
+               
+        // console.log (document.getElementById("address_div").textContent=(shop[i]));
+           
+        }else{
+            arr1[i].style.display="block";
+           
+        }
+      
+        }
+        shops();
+    }
+    function shops(){
+    for(var i=0;i<shop_length;i++){
+     var break_content=document.createElement("br");
+     address_div.appendChild(break_content);
+        //shop_name_displaying_div
+       var shop_name_div=document.createElement("div");
+       shop_name_div.setAttribute("id","shop-id")
+       shop_name_div.className="shop_name_div";
+       address_div.appendChild(shop_name_div);
+   // shop_name
+       var shop_name=document.createElement("h3");
+       shop_name.className="shop_name";
+    //    shop_name.setAttribute("id","shopname-id")
+       shop_name.innerText=shop[i].Name;
+       shop_name_div.appendChild(shop_name);
+       //shop_address
+       var shop_address=document.createElement("p");
+      shop_address.className="address_name";
+       shop_address.innerText=shop[i].Address;
+       shop_name_div.appendChild(shop_address);
+    //   icon
+    // var icon=document.createElement("i");
+    // shop_name_div.appendChild(icon);
+    // let shop_icon=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    // let shop_path=document.createElementNS("http://www.w3.org/2000/svg");
+    // shop_icon.setAttribute("fill","currentColor");
+    // shop_icon.setAttribute("viewBox","0 0 16 16");
+    // shop_icon.setAttribute("width","25");
+    // shop_icon.setAttribute("class","bi bi-info-circle");
+    // shop_icon.setAttribute("height","25");
+    // shop_path.setAttribute("d","m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z");
+    // shop_icon.setAttribute("color","#5b5959");
+    // shop_icon.appendChild(shop_path);
+    //  shop_length=shop_length+1;
+    }
+}
+    
+
+    // var btn = document.createElement("button");
+    // btn.innerText="submit";
+    // w.appendChild(btn);
+    // btn.addEventListener("click",info);
+    
+    // // var d = prompt()
+    // w.appendChild(submitelement);
+    // // console.log(submitelement)
+   
+    
+    // function locate(){
+    //     var d = document.getElementById("locate").value;
+    //     for(var i=0;i<shop.length;i++){
+    //         if(d==shop[i].Name){
+    //        document.getElementById("address_div").innerText=(shop[i].Address);
+           
+    //     }
+
+    //     }
+        
+
+    // // console.log("butterfly")
+    // }
+
+    //creating third div ie second image div
+    // var images_div2=document.createElement("div");
+    // images_div2.textContent="hi";
+    //creating first image div
+//     var images_div2=document.createElement("div");
+//     // images_div1.textContent="hi";
+//     images_div2.className="images_div_1";
+//      main_container.appendChild(images_div2);
+//     var div1=document.createElement("div");
+//     images_div2.appendChild(div1);
+//    //img1
+//     var div1_img1=document.createElement("img");
+//     div1_img1.className="images";
+//     div1_img1.src="https://th.bing.com/th/id/OIP.hGXHHmVUeNDTaU0G-g70PQAAAA?w=124&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img1)
+    
+//     //imge2
+//     var div2=document.createElement("div");
+//     var div1_img2=document.createElement("img");
+//     div1_img2.className="images";
+//     div1_img2.src="https://th.bing.com/th/id/OIP.Y0kV31Ak7AgGWcr3d4e95wHaD5?w=311&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img2)
+//    //img3
+//     var div3=document.createElement("div");
+//     var div1_img3=document.createElement("img");
+//     div1_img3.className="images";
+//     div1_img3.src="https://th.bing.com/th/id/OIP.9uB3TfOIvBCPG81nTmY-FgHaFj?w=210&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img3)
+//   //img4
+//     var div4=document.createElement("div");
+//     var div1_img4=document.createElement("img");
+//     div1_img4.className="images";
+//     div1_img4.src="https://th.bing.com/th/id/OIP._Mp28ZLcZTTI5VLJFEpl-gHaJ4?w=140&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7";
+//     div1.appendChild(div1_img4);
+
+//    //img5
+//     var div5=document.createElement("div");
+//     div5.className="images_3"
+//     var div1_img5=document.createElement("img");
+ 
+//     div1_img5.src="https://th.bing.com/th?q=Starbucks+Gift+Items&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247";
+//     div1.appendChild(div1_img5)
+//     images_div2.className="images_div_2";
+//     main_container.appendChild(images_div2);
+  
+</script>
+</html>
