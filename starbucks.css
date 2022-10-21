@@ -157,6 +157,7 @@ nav{
     text-align: center;
 }
 .shop_button{
+    z-index:-1;
     position: relative;
     bottom:80px;
     width:120px;
