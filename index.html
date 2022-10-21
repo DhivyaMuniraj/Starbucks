@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Starbucks">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en">
+    <meta name="description" content="Home">
+    <meta property="og:description" content="Home">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Starbucks Coffee Company">
+    <!-- linking css with html -->
+    <link rel="stylesheet" a href="starbucks.css">
+    <!-- title -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="main_container"></div>
+</body>
+<script>
+    //connecting html div
+    var container=document.getElementById("main_container");
+    //creating main_container for javascript
+    var main_container_1=document.createElement("div");
+    container.appendChild(main_container_1);
+    //creating top_div
+    // var top_div=document.createElement("div");
+    // top_div.className="top_div";
+    // main_container_1.appendChild(top_div);
+    //creating navigation
+    var nav=document.createElement("nav");
+    nav.className="nav"
+    // nav.innerHTML="hi"
+    main_container_1.appendChild(nav);
+    //creating navigation inner_div1 containing logo and find a store
+    var nav_innerDiv_1=document.createElement("div");
+    nav_innerDiv_1.className="nav_innerDiv_1";
+    
+    nav.appendChild(nav_innerDiv_1);
+    //add logo in inner_div_1;
+    var logo =document.createElement("img");
+    logo.src="starbucks_logo.png";
+   logo.className="logo";
+    nav_innerDiv_1.appendChild(logo);
+    //welcome to starbucks text
+    var welcome_para=document.createElement("p");
+    welcome_para.innerHTML="WELCOME TO STARBUCKS";
+    welcome_para.className="welcome_text";
+    nav_innerDiv_1.append(welcome_para);
+    //creating a ul for find a store
+    var find_store_list=document.createElement("ul");
+    find_store_list.className="find_store_list";
+    
+    nav_innerDiv_1.appendChild(find_store_list);
+    //creating anchor tag for list
+    var list_anchor=document.createElement("a");
+    list_anchor.href="findAStore.html";
+    list_anchor.className="list_anchor";
+    find_store_list.appendChild(list_anchor);
+    //creating list for icon and find a store text
+    var l1=document.createElement("li");
+    list_anchor.appendChild(l1);
+    //svg icon
+    let location_icon=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    let location_path=document.createElementNS("http://www.w3.org/2000/svg","path");
+    location_icon.setAttribute("viewBox","0 0 16 16");
+    location_icon.setAttribute("fill","currentColor");
+    location_icon.setAttribute("color","white");
+    location_icon.setAttribute("class","bi bi-geo-alt-fill");
+    location_icon.setAttribute("width","24");
+    location_icon.setAttribute("height","24");
+    location_path.setAttribute("d","M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z");
+    location_icon.appendChild(location_path);
+    l1.appendChild(location_icon);
+   
+    
+    //create find a store link
+    var l2=document.createElement("li");
+     l2.innerText="FIND A STORE";
+     l2.style.paddingLeft="5px";
+     l2.style.color="white";
+    list_anchor.appendChild(l2);
+    //creating navigation inner_div2 topics
+    var nav_innerDiv_2=document.createElement("div");
+    nav_innerDiv_2.className="nav_innerDiv_2";
+    nav_innerDiv_2.setAttribute("id","nav_innerDiv_2");
+    main_container_1.appendChild(nav_innerDiv_2);
+    //creating a underorder list for topics
+    var topics_unorder= document.createElement("ul");
+    topics_unorder.className="topics_unorder"
+    nav_innerDiv_2.appendChild(topics_unorder);
+    //creating anchor for topics
+    var topics_anchor=document.createElement("a");
+    topics_anchor.className="topics_anchor"
+    topics_anchor.href="#";
+    topics_unorder.appendChild(topics_anchor);
+    //creating topics list under unorder-list
+    //l1
+    var l1=document.createElement("li");
+    l1.className="topic_unorder_li";
+     l1.innerText="TRENDING";
+    // l1.href="Trending.html";
+     topics_anchor.appendChild(l1);
+    //l2
+    var l2=document.createElement("li");
+    l2.className="topic_unorder_li";
+     l2.innerText="REWARDS";
+     topics_anchor.appendChild(l2);
+    //l3
+    var l3=document.createElement("li");
+    l3.className="topic_unorder_li";
+     l3.innerText="GIFTCARD";
+     topics_anchor.appendChild(l3);
+     //l4
+     var l4=document.createElement("li");
+     l4.className="topic_unorder_li";
+     l4.innerText="RESERVE";
+     topics_anchor.appendChild(l4);
+     //l5
+     var l5=document.createElement("li");
+     l5.className="topic_unorder_li";
+     l5.innerText="DELIVERY";
+     topics_anchor.appendChild(l5);
+     //creating section 1;
+     var section_1=document.createElement("section");
+     main_container_1.appendChild(section_1);
+     //creating hand-image-div
+     var hand_image_div=document.createElement("div");
+     hand_image_div.className="hand_image_div";
+     section_1.appendChild(hand_image_div);
+     //creating image in div
+     var hand_image=document.createElement("img");
+     hand_image.src="Image1.jpg";
+     hand_image.className="section1_image1";
+     hand_image_div.appendChild(hand_image);
+      //creating monsoon_image-div
+      var monsoon_image_div=document.createElement("div");
+      monsoon_image_div.className="monsoon_image_div";
+     section_1.appendChild(monsoon_image_div);
+     //creating monsoon_image in div
+     var monsoon_image=document.createElement("img");
+     monsoon_image.src="image2.jpg";
+     monsoon_image.className="section1_image1";
+     monsoon_image_div.appendChild(monsoon_image);
+      //creating tropical_image_div
+      var tropical_image_div=document.createElement("div");
+      tropical_image_div.className="tropical_image_div";
+     section_1.appendChild(tropical_image_div);
+     //creating tropical_image in div
+     var tropical_image=document.createElement("img");
+     tropical_image.src="image3.jpg";
+     tropical_image.className="section1_image1";
+     tropical_image_div.appendChild(tropical_image);
+     //creating  scoop of delight_image_div
+     var scoop_of_delight_image_div=document.createElement("div");
+     scoop_of_delight_image_div.className="scoop_of_delight_image_div";
+     section_1.appendChild(scoop_of_delight_image_div);
+     //creating scoop of delight in div
+     var scoop_of_delight_image=document.createElement("img");
+     scoop_of_delight_image.src="https://wallpapercave.com/wp/wp3617530.jpg";
+     scoop_of_delight_image_div.appendChild(scoop_of_delight_image);
+     scoop_of_delight_image.className="section1_image1";
+     //creating mobile order and pay div
+     var mobile_order_image_div=document.createElement("div");
+     mobile_order_image_div.className="mobile_order_image_div";
+     section_1.appendChild(mobile_order_image_div);
+     //creating a anchor to order div
+     var mobile_anchor=document.createElement("a");
+     mobile_anchor.href="https://www.flipkart.com/search?q=starbucks+cup&sid=upp%2Ci7t%2Cmsi&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_1_13_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_13_na_na_na&as-pos=1&as-type=RECENT&suggestionId=starbucks+cup%7CMugs&requestId=252fe645-288c-41eb-8c1f-3aa1f294f241&as-searchtext=starbucks%20cuo";
+     mobile_order_image_div.appendChild(mobile_anchor);
+     //creating mobile order image in div
+     var mobile_order_image=document.createElement("img");
+     mobile_order_image.src="https://th.bing.com/th/id/OIP.POI7TVhnioVNHqHKDn9suwHaEK?w=279&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7https://www.starbucks.in/media/scoope-banner4.png";
+     mobile_anchor.appendChild(mobile_order_image);
+     mobile_order_image.className="section2_image1";
+     //shop now button
+     var shop_now_button=document.createElement("button");
+     shop_now_button.innerText="SHOP NOW";
+     shop_now_button.className="shop_button";
+     mobile_anchor.appendChild(shop_now_button);
+
+     //creating section2
+     var section_2=document.createElement("section");
+     section_2.className="section_2";
+     main_container_1.appendChild(section_2);
+     //creating section2_div1
+     var section2_div1=document.createElement("div");
+     section2_div1.className="section2_div1";
+     section_2.appendChild(section2_div1);
+    // creating delight you_div
+    var delight_you=document.createElement("img");
+    delight_you.src="https://rmkcdn.successfactors.com/98fec2eb/de29dbad-2147-45af-9ed5-a.jpg";
+    delight_you.className="delight_img";
+    section2_div1.appendChild(delight_you);
+    //creating delight you content
+    var delight_content_div=document.createElement("div");
+    delight_content_div.className="delight_div";
+    section2_div1.appendChild(delight_content_div);
+    //creating heading for delight
+    var delight_div_heading=document.createElement("h1");
+    delight_div_heading.innerHTML="LET US DELIGHT YOU";
+    delight_div_heading.className="delight_heading";
+   delight_content_div.append(delight_div_heading);
+   // creating para for delight
+   var delight_div_para=document.createElement("p");
+   delight_div_para.innerText="Delicious, handcrafted beverages and great-tasting food. The secret to making life better.";
+   delight_div_para.className="delight_para";
+   delight_content_div.appendChild(delight_div_para);
+   //creating section3
+   var section_3=document.createElement("section");
+   section_3.className="section_3";
+     main_container_1.appendChild(section_3);
+     //creating section3_div1
+     var section3_div1=document.createElement("div");
+     section3_div1.className="section3_div1";
+     section_3.appendChild(section3_div1);
+     //creating div;
+     var opportunity_div=document.createElement("div");
+     opportunity_div.className="opportunity_div";
+     section3_div1.appendChild(opportunity_div);
+     //creating heading
+     var opportunity_div_heading=document.createElement("h1");
+     opportunity_div_heading.innerHTML="OPPORTUNITY";
+     opportunity_div_heading.className="opportunity_div_heading";
+     opportunity_div.appendChild(opportunity_div_heading);
+     //creating para
+     var opportunity_div_para=document.createElement("para");
+     opportunity_div_para.innerHTML="To be more than an employee, to be a partner.";
+     opportunity_div_para.className="opportunity_div_para";
+     opportunity_div.appendChild(opportunity_div_para);
+     //creating img
+     var opportunity_img=document.createElement("img");
+     opportunity_img.src="https://rmkcdn.successfactors.com/98fec2eb/dc1ae8a4-44ea-4c4e-9efb-5.jpg";
+     opportunity_img.className="opportunity_img";
+     section3_div1.appendChild(opportunity_img);
+     //creating section_4 for social media icons
+     var section_4=document.createElement("section");
+     main_container_1.appendChild(section_4);
+     //creating section_4_div_1
+     var section_4_div_1=document.createElement("div");
+     section_4_div_1.className="section_4_div_1";
+     section_4.appendChild(section_4_div_1);
+     //creating social underorder list
+     var social_under=document.createElement("ul");
+     social_under.className="social_unorder";
+     section_4_div_1.appendChild(social_under);
+     //creating anchor for social list
+     var social_anchor=document.createElement("a");
+     social_anchor.href="#";
+     social_anchor.className="social_anchor";
+     social_under.appendChild(social_anchor);
+     //creating list 1
+    var social_list_1=document.createElement("li");
+    social_anchor.appendChild(social_list_1);
+    let facebook_icon=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    let facebook_path=document.createElementNS("http://www.w3.org/2000/svg","path");
+    facebook_icon.setAttribute("fill","currentColor");
+    facebook_icon.setAttribute("viewBox","0 0 16 16");
+    facebook_icon.setAttribute("width","25");
+    facebook_icon.setAttribute("class","bi bi-facebook");
+    facebook_icon.setAttribute("height","25");
+    facebook_path.setAttribute("d","M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z");
+    facebook_icon.setAttribute("color","#5b5959");
+    facebook_icon.appendChild(facebook_path);
+    social_list_1.className="social_unorder_li";
+    social_list_1.appendChild(facebook_icon); 
+    //creating l2
+    var social_list_2=document.createElement("li");
+    social_anchor.appendChild(social_list_2);
+    let twitter_icon=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    let twitter_path=document.createElementNS("http://www.w3.org/2000/svg","path");
+    twitter_icon.setAttribute("fill","currentColor");
+    twitter_icon.setAttribute("viewBox","0 0 16 16");
+    twitter_icon.setAttribute("width","25");
+    twitter_icon.setAttribute("class","bi bi-twitter");
+    twitter_icon.setAttribute("height","25");
+    twitter_path.setAttribute("d","M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z");
+    twitter_icon.setAttribute("color","#5b5959");
+    twitter_icon.appendChild(twitter_path);
+    social_list_2.className="social_unorder_li";
+    social_list_2.appendChild(twitter_icon); 
+    //creating l3
+    var social_list_3=document.createElement("li");
+    social_anchor.appendChild(social_list_3);
+    let instagram_icon=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    let instagram_path=document.createElementNS("http://www.w3.org/2000/svg","path");
+    instagram_icon.setAttribute("fill","currentColor");
+    instagram_icon.setAttribute("viewBox","0 0 16 16");
+    instagram_icon.setAttribute("width","25");
+    instagram_icon.setAttribute("class","bi bi-instagram");
+    instagram_icon.setAttribute("height","25");
+    instagram_path.setAttribute("d","M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z");
+    instagram_icon.setAttribute("color","#5b5959");
+    instagram_icon.appendChild(instagram_path);
+    social_list_3.className="social_unorder_li";
+    social_list_3.appendChild(instagram_icon); 
+    //creating footer
+    var footer=document.createElement("footer");
+    main_container_1.appendChild(footer);
+    //creating anchor div
+    var footer_anchor=document.createElement("a");
+    footer_anchor.className="footer_anchor";
+    footer_anchor.href="#";
+    footer.appendChild(footer_anchor);
+    //creating about us service div
+    var about_service_div=document.createElement("div");
+    // about_service_div.innerHTML="hi";
+    about_service_div.className="about_service_div";
+    footer_anchor.appendChild(about_service_div);
+    //creating about us div
+    var about_div=document.createElement("div");
+    about_service_div.appendChild(about_div);
+    //creating unorder under about us
+    var about_unorder=document.createElement("ul");
+    about_unorder.className="footer_unorder";
+    about_div.appendChild(about_unorder);
+    // //creating anchor inside the unorder list
+    // var about_anchor=document.createElement("a");
+    // about_anchor.href="#";
+    // about_unorder.appendChild(about_anchor);
+    //l1
+    var about_l1=document.createElement("h4");
+    about_l1.innerText="ABOUT US"
+    about_unorder.appendChild(about_l1);
+    //l2
+    var about_l2=document.createElement("li");
+    about_l2.className="footer_li";
+    about_l2.innerText="Our Heritage"
+    about_unorder.appendChild(about_l2);
+    //l3
+    var about_l3=document.createElement("li");
+    about_l3.className="footer_li";
+    about_l3.innerText="Our Company"
+    about_unorder.appendChild(about_l3);
+     //creating service us div
+     var service_div=document.createElement("div");
+      about_service_div.appendChild(service_div);
+    //creating unorder under about us
+    var service_unorder=document.createElement("ul");
+    service_unorder.className="footer_unorder";
+    service_div.appendChild(service_unorder);
+    //l1
+    var service_l1=document.createElement("h4");
+    service_l1.innerText="CUSTOMER SERVICE"
+    service_unorder.appendChild(service_l1);
+    //l2
+    var service_l2=document.createElement("li");
+    service_l2.innerText="Frequently Asked Questions";
+    service_l2.className="footer_li";
+    service_unorder.appendChild(service_l2);
+     //creating quick us div
+     var quick_div=document.createElement("div");
+      about_service_div.appendChild(quick_div);
+    //creating unorder under about us
+    var quick_unorder=document.createElement("ul");
+    quick_unorder.className="footer_unorder";
+    quick_div.appendChild(quick_unorder);
+    //l1
+    var quick_l1=document.createElement("h4");
+    quick_l1.innerText="QUICK LINKS";
+    quick_unorder.appendChild(quick_l1);
+    //l2
+    var quick_l2=document.createElement("li");
+    quick_l2.className="footer_li";
+    quick_l2.innerText="Store Locator";
+    quick_unorder.appendChild(quick_l2);
+    //creating last unorder 
+    var last_unorder=document.createElement("ul");
+    last_unorder.className="last_unorder";
+    footer_anchor.appendChild(last_unorder);
+    //l1
+    var last_l1=document.createElement("li");
+    last_l1.className="last_unorder_li";
+    last_l1.innerText="Web Accessibility"
+    last_unorder.appendChild(last_l1);
+    //l2
+    var last_l2=document.createElement("li");
+    last_l2.className="last_unorder_li";
+    last_l2.innerText="Privacy Statement";
+    last_unorder.appendChild(last_l2);
+    //l3
+    var last_l3=document.createElement("li");
+    last_l3.className="last_unorder_li";
+    last_l3.innerText="Terms Of Use"
+    last_unorder.appendChild(last_l3);
+    //l4
+    var last_l4=document.createElement("li");
+    last_l4.className="last_unorder_li";
+    last_l4.innerText="Site Map"
+    last_unorder.appendChild(last_l4);
+    //l5
+    var last_l5=document.createElement("li");
+    last_l5.innerText="Contact Us"
+    last_unorder.appendChild(last_l5);
+    //creating copy right
+    var copy_right=document.createElement("p");
+    copy_right.className="copy_right";
+    copy_right.innerText="© 2022 Starbucks Coffee Company. All rights reserved.";
+    footer.appendChild(copy_right);
+</script>
+</html>
